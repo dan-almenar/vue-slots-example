@@ -1,6 +1,8 @@
 # vue-slots-example
+## by [Dan Almenar](https://danielalmenar.com)
 
-This template should help get you started developing with Vue 3 in Vite.
+The sole purpose of this mini app is to showcase **possible uses for the Vue \<slot\> tag**, not only to add HTML elements to the child component directly from the parent's component \<template\> tag both to retrieve data or even functions (methods) from the child component and use them directly on the parent. In no way the components functionality is design as they would in a real project.
+
 
 ## Recommended IDE Setup
 

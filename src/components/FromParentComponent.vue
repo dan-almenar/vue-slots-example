@@ -16,10 +16,19 @@ export default {
 </script>
 
 <script setup>
+import { inject, watch } from 'vue'
 import { ref } from 'vue'
+const clearForm = inject('clearForm')
 const userName = ref('')
 const userPassword = ref('')
 const userEmail = ref('')
+watch(clearForm, () => {
+  if (clearForm.value === false){
+    userName.value = ''
+    userPassword.value = ''
+    userEmail.value = ''
+  }
+})
 </script>
 
 <style scoped>
