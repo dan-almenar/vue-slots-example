@@ -3,6 +3,8 @@
 <div class="header">
     <h1>Vue {{ '<slot>' }} example</h1>
     <h3>by <a href="https://danielalmenar.com">Dan Almenar</a></h3>
+    <h3>Click <a href="https://github.com/dan-almenar/vue-slots-example" target="blank">here</a> 
+    to see the complete code of this app.</h3>
 </div>
 <div class="content-block">
 <h2>Normal rendering:</h2>
