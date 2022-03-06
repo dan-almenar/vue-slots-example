@@ -1,7 +1,7 @@
 # vue-slots-example
 ## by [Dan Almenar](https://danielalmenar.com)
 
-The sole purpose of this mini app is to showcase **possible uses for the Vue \<slot\> tag**, not only to add HTML elements to the child component directly from the parent's component \<template\> tag both to retrieve data or even functions (methods) from the child component and use them directly on the parent. In no way the components functionality is design as they would in a real project.
+The sole purpose of this mini app is to showcase **possible uses for the Vue \<slot\> tag**, not only to add HTML elements to the child component directly from the parent's component \<template\> tag, but also to embed other components, or to retrieve data and even functions (methods) from the child component and use them directly on the parent. In no way the components functionality is design as they would in a real project.
 
 
 ## Recommended IDE Setup
