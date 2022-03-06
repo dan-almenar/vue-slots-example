@@ -9,12 +9,6 @@
   <slot :userName="userName" :userEmail="userEmail" :userPassword="userPassword" />
 </template>
 
-<script>
-export default {
-    name: 'FromParentComponent',
-}
-</script>
-
 <script setup>
 import { inject, watch } from 'vue'
 import { ref } from 'vue'
@@ -32,6 +26,9 @@ watch(clearForm, () => {
 </script>
 
 <style scoped>
+form {
+  margin-top: 50px;
+}
 .input-box {
   width: 350px;
   padding: 5px 20px;

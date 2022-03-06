@@ -49,6 +49,18 @@
                         <li>{{ user.name }}</li>
                         <p> {{ user.email }}</p>
                     </ul>
+                    <div class="nested">
+                        <h2>Nested Component:</h2>
+                        <p>The <span class="nested-component">NestedComponent</span>
+                         has been embeded into the <span class="to-parent">ToParentComponent</span>
+                          directly from the <span class="parent">ParentComponent</span>
+                           and then the <span class="parent">ParentComponent</span>
+                            has placed the 'Parent Bar' button into the 
+                            <span class="nested-component">NestedComponent</span>'s slot.</p>
+                        <NestedComponent>
+                            <button @click="bar">Parent Bar</button>
+                        </NestedComponent>
+                    </div>
                 </ToParentComponent>
             </div>
     </div>
@@ -60,14 +72,15 @@
             'Current users in database' list or to log in
             one of said users.
         </p>
+        <p>Play around with the Nested and Parent buttons.</p>
     </div>
 </template>
 
 <script setup>
-import { provide } from 'vue'
+import { ref, provide } from 'vue'
+import NestedComponent from '@/components/NestedComponent.vue'
 import FromParentComponent from '@/components/FromParentComponent.vue'
 import ToParentComponent from '@/components/ToParentComponent.vue'
-import { ref } from 'vue'
 
 const clearForm = ref(false)
 provide('clearForm', clearForm)
@@ -125,7 +138,10 @@ const handleUsers = (email, password, name) => {
     setTimeout(() => {
         clearForm.value = false
     }, 300)
-}   
+}
+const bar = () => {
+    alert('Bar')
+}
 </script>
 
 <style scoped>
@@ -159,6 +175,9 @@ span {
 }
 .to-parent {
     color: blue;
+}
+.nested-component {
+    color: orange;
 }
 .content-block {
     margin-top: 30px;
@@ -196,5 +215,24 @@ button {
 .instructions > p {
     font-size: 1.2rem;
     margin-top: 15px;
+}
+.nested {
+    width: 400px;
+    border: 3px solid orange;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+.nested > p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.nested > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 </style>
